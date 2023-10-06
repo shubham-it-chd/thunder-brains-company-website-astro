@@ -1,0 +1,32 @@
+body {
+	overflow-x: hidden;
+}
+
+a[href*=tel] {
+	display: inline-block;
+	direction: ltr;
+}
+
+.owl-carousel {
+	direction: ltr;
+}
+
+.owl-carousel .owl-nav,
+.owl-carousel .owl-dots,
+.owl-carousel .owl-item {
+	direction: rtl;
+}
+
+.main-slider__nav .swiper-button-next,
+.main-slider__nav .swiper-button-prev {
+	position: static;
+}
+
+.footer-one .shape4 {
+	left: 0;
+}
+
+.main-slider-one .owl-carousel .owl-nav button.owl-next span::before,
+.main-slider-one .owl-carousel .owl-nav button.owl-prev span::before{
+	transform: rotate(180deg);
+}
