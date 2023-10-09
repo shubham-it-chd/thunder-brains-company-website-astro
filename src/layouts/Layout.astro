@@ -47,12 +47,12 @@ const { title } = Astro.props;
     </style>
     <link rel='stylesheet' id='wp-block-library-css'
           href='wp-includes/css/dist/block-library/style.min9b30.css?ver=6.3.1' media='all' />
-    <link rel='stylesheet' id='wc-blocks-vendors-style-css'
+    <!-- <link rel='stylesheet' id='wc-blocks-vendors-style-css'
           href='wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style71f0.css?ver=10.9.3'
           media='all' />
     <link rel='stylesheet' id='wc-all-blocks-style-css'
           href='wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-all-blocks-style71f0.css?ver=10.9.3'
-          media='all' />
+          media='all' /> -->
     <style id='classic-theme-styles-inline-css'>
         /*! This file is auto-generated */
         .wp-block-button__link {
@@ -630,24 +630,26 @@ const { title } = Astro.props;
 			var wpcf7 = { "api": { "root": "https:\/\/bracketweb.com\/ontechwp\/wp-json\/", "namespace": "contact-form-7\/v1" }, "cached": "1" };
 		</script>
 		<script src='wp-content/plugins/contact-form-7/includes/js/index41a3.js?ver=5.8' id='contact-form-7-js'></script>
-		<script src='//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.mine637.js?ver=1696262227'
+		<script src='//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.min.js?ver=1696262227'
 				id='js-cookie-js'></script>
 		<script src='wp-content/plugins/layerdrops-toolbar/assets/js/jQuery.style.switcher.mine637.js?ver=1696262227'
 				id='jquery-style-switcher-js'></script>
 		<script src='wp-content/plugins/layerdrops-toolbar/assets/js/color-switchere637.js?ver=1696262227'
 				id='layerdrops-toolbar-color-switcher-js'></script>
-		<script src='wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.minf111.js?ver=2.7.0-wc.8.1.1'
-				id='jquery-blockui-js'></script>
+		<!-- <script src='wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.minf111.js?ver=2.7.0-wc.8.1.1'
+				id='jquery-blockui-js'></script> -->
 		<script id='wc-add-to-cart-js-extra'>
-			var wc_add_to_cart_params = { "ajax_url": "\/ontechwp\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/ontechwp\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "https:\/\/bracketweb.com\/ontechwp\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
+			// var wc_add_to_cart_params = { "ajax_url": "\/ontechwp\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/ontechwp\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "https:\/\/bracketweb.com\/ontechwp\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
+            var wc_add_to_cart_params = {};
 		</script>
-		<script src='wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min12c8.js?ver=8.1.1'
-				id='wc-add-to-cart-js'></script>
+		<!-- <script src='wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min12c8.js?ver=8.1.1'
+				id='wc-add-to-cart-js'></script> -->
 		<script id='woocommerce-js-extra'>
-			var woocommerce_params = { "ajax_url": "\/ontechwp\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/ontechwp\/?wc-ajax=%%endpoint%%" };
+			// var woocommerce_params = { "ajax_url": "\/ontechwp\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/ontechwp\/?wc-ajax=%%endpoint%%" };
+            var woocommerce_params = {};
 		</script>
-		<script src='wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min12c8.js?ver=8.1.1'
-				id='woocommerce-js'></script>
+		<!-- <script src='wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min12c8.js?ver=8.1.1'
+				id='woocommerce-js'></script> -->
 		<script src='wp-content/themes/ontech/assets/vendors/bootstrap/js/bootstrap.minbb93.js?ver=5.0.0'
 				id='bootstrap-js'></script>
 		<script src='wp-content/plugins/ontech-addon/assets/vendors/bootstrap-select/js/bootstrap-select.mine50e.js?ver=1687692738'
@@ -690,14 +692,16 @@ const { title } = Astro.props;
 		<script src='wp-content/plugins/ontech-addon/assets/vendors/progress-bar/knobde63.js?ver=1690723582'
 				id='progress-bar-js'></script>
 		<script id='ontech-addon-script-js-extra'>
-			var ontech_login_object = { "ajaxurl": "https:\/\/bracketweb.com\/ontechwp\/wp-admin\/admin-ajax.php", "login_redirect_url": "http:\/\/https:\/\/bracketweb.com\/ontechwp\/my-account\/", "registration_redirect_url": "http:\/\/https:\/\/bracketweb.com\/ontechwp\/my-account\/", "message": "<strong>Error:<\/strong>Please use valid userName or password" };
+			// var ontech_login_object = { "ajaxurl": "https:\/\/bracketweb.com\/ontechwp\/wp-admin\/admin-ajax.php", "login_redirect_url": "http:\/\/https:\/\/bracketweb.com\/ontechwp\/my-account\/", "registration_redirect_url": "http:\/\/https:\/\/bracketweb.com\/ontechwp\/my-account\/", "message": "<strong>Error:<\/strong>Please use valid userName or password" };
+                var ontech_login_object = {};
 		</script>
 		<script src='wp-content/plugins/ontech-addon/assets/js/ontech-addonde63.js?ver=1690723582'
 				id='ontech-addon-script-js'></script>
 		<script src='wp-content/plugins/woo-smart-wishlist/assets/libs/perfect-scrollbar/js/perfect-scrollbar.jquery.min125b.js?ver=4.7.4'
 				id='perfect-scrollbar-js'></script>
 		<script id='woosw-frontend-js-extra'>
-			var woosw_vars = { "ajax_url": "https:\/\/bracketweb.com\/ontechwp\/wp-admin\/admin-ajax.php", "nonce": "eeef1b2b6e", "menu_action": "open_page", "perfect_scrollbar": "yes", "wishlist_url": "https:\/\/bracketweb.com\/ontechwp\/wishlist\/", "button_action": "list", "message_position": "right-top", "button_action_added": "popup", "empty_confirm": "This action cannot be undone. Are you sure?", "delete_confirm": "This action cannot be undone. Are you sure?", "copied_text": "Copied the wishlist link:", "menu_text": "Wishlist", "button_text": "Add to wishlist", "button_text_added": "Browse wishlist", "button_normal_icon": "woosw-icon-5", "button_added_icon": "woosw-icon-8", "button_loading_icon": "woosw-icon-4" };
+			// var woosw_vars = { "ajax_url": "https:\/\/bracketweb.com\/ontechwp\/wp-admin\/admin-ajax.php", "nonce": "eeef1b2b6e", "menu_action": "open_page", "perfect_scrollbar": "yes", "wishlist_url": "https:\/\/bracketweb.com\/ontechwp\/wishlist\/", "button_action": "list", "message_position": "right-top", "button_action_added": "popup", "empty_confirm": "This action cannot be undone. Are you sure?", "delete_confirm": "This action cannot be undone. Are you sure?", "copied_text": "Copied the wishlist link:", "menu_text": "Wishlist", "button_text": "Add to wishlist", "button_text_added": "Browse wishlist", "button_normal_icon": "woosw-icon-5", "button_added_icon": "woosw-icon-8", "button_loading_icon": "woosw-icon-4" };
+            var woosw_vars = {};
 		</script>
 		<script src='wp-content/plugins/woo-smart-wishlist/assets/js/frontend125b.js?ver=4.7.4'
 				id='woosw-frontend-js'></script>
