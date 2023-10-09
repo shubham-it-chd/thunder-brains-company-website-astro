@@ -1,11 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import FooterWithoutAddressBar from "../components/FooterWithoutAddressBar.astro";
 interface Props {}
 
 const {} = Astro.props;
 ---
+<style>
+    .page-header__bg {
+    background-image: url(wp-content/uploads/2023/07/page-header-bg.jpg) !important;
+}
+</style>
 <Layout title="About">
     <Header />
     <!--Start Page Header-->
@@ -16,13 +21,13 @@ const {} = Astro.props;
         <div class="container">
             <div class="page-header__inner text-center">
                 <h2>
-                    Contact-Us
+                    Contact Us
                 </h2>
 
                 <ul class="thm-breadcrumb list-unstyled ml-0">
                     <!-- Breadcrumb NavXT 7.2.0 -->
                     <li class="home"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Thunder Brains." href="" class="home"><span property="name">ThunderBrains</span></a><meta property="position" content="1"></span></li>
-                    <li class="post post-page current-item"><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-page current-item">Data Structuring</span><meta property="url" content="/data-structuring/"><meta property="position" content="2"></span></li>
+                    <li class="post post-page current-item"><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-page current-item">Contact</span><meta property="url" content="/data-structuring/"><meta property="position" content="2"></span></li>
                 </ul>
             </div>
         </div>
@@ -41,24 +46,24 @@ const {} = Astro.props;
                                     </div>
 
                                     <ul class="list-unstyled ml-0">
-                                        <!--Start Contact Page Top single-->
+                                        <!-- Start Contact Page Top single -->
                                         <li class="contact-page__top-single">
                                             <div class="icon">
-                                                <span aria-hidden="true" class="  icon-location-filled"></span>
+                                                <span aria-hidden="true" class="icon-location-filled"></span>
                                             </div>
                                             <div class="content">
                                                 <h2>Address</h2>
                                                 <p>
-                                                    4th Floor, Plot No C, Times Square, #405, 196-A, Phase 8B,</br> Industrial Area,
-                                                    Sector 74,</br> Sahibzada Ajit Singh Nagar, Punjab 160055
+                                                    4th Floor, Plot No C, Times Square, #405, 196-A, Phase 8B,<br> Industrial Area,
+                                                    Sector 74,<br> Sahibzada Ajit Singh Nagar, Punjab 160055
                                                 </p>
                                             </div>
                                         </li>
-                                        <!--End Contact Page Top single-->
-                                        <!--Start Contact Page Top single-->
+                                        <!-- End Contact Page Top single -->
+                                        <!-- Start Contact Page Top single -->
                                         <li class="contact-page__top-single">
                                             <div class="icon">
-                                                <span aria-hidden="true" class="   icon-phone-auricular"></span>
+                                                <span aria-hidden="true" class="icon-phone-auricular"></span>
                                             </div>
                                             <div class="content">
                                                 <h2>Get In Touch</h2>
@@ -68,11 +73,11 @@ const {} = Astro.props;
                                                 </p>
                                             </div>
                                         </li>
-                                        <!--End Contact Page Top single-->
-                                        <!--Start Contact Page Top single-->
+                                        <!-- End Contact Page Top single -->
+                                        <!-- Start Contact Page Top single -->
                                         <li class="contact-page__top-single">
                                             <div class="icon">
-                                                <span aria-hidden="true" class="   icon-email2"></span>
+                                                <span aria-hidden="true" class="icon-email2"></span>
                                             </div>
                                             <div class="content">
                                                 <h2>Email Address</h2>
@@ -82,9 +87,9 @@ const {} = Astro.props;
                                                 </p>
                                             </div>
                                         </li>
-                                        <!--End Contact Page Top single-->
-
+                                        <!-- End Contact Page Top single -->
                                     </ul>
+                                    
                                 </div>
 
                             </div>
@@ -185,7 +190,10 @@ const {} = Astro.props;
                                 <div class="elementor-custom-embed">
                                     <iframe src="https://maps.google.com/maps?q=ThunderBrains&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
                                             title="Thunder Brains Pvt. Ltd."
-                                            aria-label="Thunder Brains Pvt. Ltd."></iframe>
+                                            aria-label="Thunder Brains Pvt. Ltd."
+                                            width="100%"
+                                            height="500px">
+                                    </iframe>
                                 </div>
                             </div>
                         </div>
@@ -193,10 +201,13 @@ const {} = Astro.props;
                 </div>
             </div>
         </section>
+        
+        
+        
     </div>
 
 
 
 </div>
-    <Footer />
+    <FooterWithoutAddressBar />
 </Layout>
