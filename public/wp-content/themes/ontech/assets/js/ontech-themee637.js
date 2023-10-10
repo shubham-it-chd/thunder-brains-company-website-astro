@@ -1,84 +1,86 @@
 (function ($) {
   "use strict";
 
-  if ($(".scroll-to-target").length) {
-    $(".scroll-to-target").on("click", function () {
-      var target = $(this).attr("data-target");
-      $("html, body").animate({
-          scrollTop: $(target).offset().top,
-        },
-        1000
+  $(document).ready(function () {
+    if ($(".scroll-to-target").length) {
+      $(".scroll-to-target").on("click", function () {
+        var target = $(this).attr("data-target");
+        $("html, body").animate({
+            scrollTop: $(target).offset().top,
+          },
+          1000
+        );
+        return false;
+      });
+    }
+  
+    if ($(".main-menu__list").length) {
+      let currentMenuItem = $(".main-menu__list").find("li.current-menu-item");
+      let currentMenuParent = $(".main-menu__list").find("li.current-menu-parent");
+      let currentMenuAncestor = $(".main-menu__list").find("li.current-menu-ancestor");
+      let currentPageItem = $(".main-menu__list").find("li.current_page_item");
+      currentMenuItem.addClass("current");
+      currentMenuParent.addClass("current");
+      currentMenuAncestor.addClass("current");
+      currentPageItem.addClass("current");
+    }
+  
+    if ($(".main-menu__list").length && $(".mobile-nav__container").length) {
+      let navContent = document.querySelector(".main-menu__list").outerHTML;
+      let mobileNavContainer = document.querySelector(".mobile-nav__container");
+      mobileNavContainer.innerHTML = navContent;
+    }
+    if ($(".sticky-header__content").length) {
+      let navContent = document.querySelector(".main-menu").innerHTML;
+      let mobileNavContainer = document.querySelector(".sticky-header__content");
+      mobileNavContainer.innerHTML = navContent;
+    }
+  
+    if ($(".mobile-nav__container .main-menu__list").length) {
+      let dropdownAnchor = $(
+        ".mobile-nav__container .main-menu__list .menu-item-has-children > a"
       );
-      return false;
-    });
-  }
-
-  if ($(".main-menu__list").length) {
-    let currentMenuItem = $(".main-menu__list").find("li.current-menu-item");
-    let currentMenuParent = $(".main-menu__list").find("li.current-menu-parent");
-    let currentMenuAncestor = $(".main-menu__list").find("li.current-menu-ancestor");
-    let currentPageItem = $(".main-menu__list").find("li.current_page_item");
-    currentMenuItem.addClass("current");
-    currentMenuParent.addClass("current");
-    currentMenuAncestor.addClass("current");
-    currentPageItem.addClass("current");
-  }
-
-  if ($(".main-menu__list").length && $(".mobile-nav__container").length) {
-    let navContent = document.querySelector(".main-menu__list").outerHTML;
-    let mobileNavContainer = document.querySelector(".mobile-nav__container");
-    mobileNavContainer.innerHTML = navContent;
-  }
-  if ($(".sticky-header__content").length) {
-    let navContent = document.querySelector(".main-menu").innerHTML;
-    let mobileNavContainer = document.querySelector(".sticky-header__content");
-    mobileNavContainer.innerHTML = navContent;
-  }
-
-  if ($(".mobile-nav__container .main-menu__list").length) {
-    let dropdownAnchor = $(
-      ".mobile-nav__container .main-menu__list .menu-item-has-children > a"
-    );
-    dropdownAnchor.each(function () {
-      let self = $(this);
-      let toggleBtn = document.createElement("BUTTON");
-      toggleBtn.setAttribute("aria-label", "dropdown toggler");
-      toggleBtn.innerHTML = "<i class='fa fa-angle-down'></i>";
-      self.append(function () {
-        return toggleBtn;
-      });
-      self.find("button").on("click", function (e) {
-        e.preventDefault();
+      dropdownAnchor.each(function () {
         let self = $(this);
-        self.toggleClass("expanded");
-        self.parent().toggleClass("expanded");
-        self.parent().parent().children("ul").slideToggle();
+        let toggleBtn = document.createElement("BUTTON");
+        toggleBtn.setAttribute("aria-label", "dropdown toggler");
+        toggleBtn.innerHTML = "<i class='fa fa-angle-down'></i>";
+        self.append(function () {
+          return toggleBtn;
+        });
+        self.find("button").on("click", function (e) {
+          e.preventDefault();
+          let self = $(this);
+          self.toggleClass("expanded");
+          self.parent().toggleClass("expanded");
+          self.parent().parent().children("ul").slideToggle();
+        });
       });
-    });
-  }
-
-  if ($(".mobile-nav__toggler").length) {
-    $(".mobile-nav__toggler").on("click", function (e) {
-      e.preventDefault();
-      $(".mobile-nav__wrapper").toggleClass("expanded");
-      $("body").toggleClass("locked");
-    });
-  }
-
-  if ($(".search-toggler").length) {
-    $(".search-toggler").on("click", function (e) {
-      e.preventDefault();
-      $(".search-popup").toggleClass("active");
-      $(".mobile-nav__wrapper").removeClass("expanded");
-      $("body").toggleClass("locked");
-    });
-  }
-
-
-  if ($(".dynamic-year").length) {
-    let date = new Date();
-    $(".dynamic-year").html(date.getFullYear());
-  }
+    }
+  
+    if ($(".mobile-nav__toggler").length) {
+      $(".mobile-nav__toggler").on("click", function (e) {
+        e.preventDefault();
+        $(".mobile-nav__wrapper").toggleClass("expanded");
+        $("body").toggleClass("locked");
+      });
+    }
+  
+    if ($(".search-toggler").length) {
+      $(".search-toggler").on("click", function (e) {
+        e.preventDefault();
+        $(".search-popup").toggleClass("active");
+        $(".mobile-nav__wrapper").removeClass("expanded");
+        $("body").toggleClass("locked");
+      });
+    }
+  
+  
+    if ($(".dynamic-year").length) {
+      let date = new Date();
+      $(".dynamic-year").html(date.getFullYear());
+    }
+  });
 
 
 
@@ -233,7 +235,7 @@
       }
     );
   }
-
+  $(document).ready(function () {
   // custom coursor
   if ($(".custom-cursor").length) {
 
@@ -292,6 +294,6 @@
     }
     $(this).next().trigger("change");
   });
-
+});
 
 })(jQuery);
