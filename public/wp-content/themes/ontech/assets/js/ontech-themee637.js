@@ -1,7 +1,7 @@
 (function ($) {
   "use strict";
 
-  $(document).ready(function () {
+  window.addEventListener("load", function () {
     if ($(".scroll-to-target").length) {
       $(".scroll-to-target").on("click", function () {
         var target = $(this).attr("data-target");
@@ -235,7 +235,7 @@
       }
     );
   }
-  $(document).ready(function () {
+  window.addEventListener("load", function () {
   // custom coursor
   if ($(".custom-cursor").length) {
 
