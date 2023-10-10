@@ -7,7 +7,12 @@ interface Props {}
 
 const {} = Astro.props;
 ---
-<Layout title="" description="" keywords="">
+<style>
+    .page-header__bg {
+        background-image: url(wp-content/uploads/2023/07/page-header-bg.jpg) !important;
+    }
+</style>
+<Layout title="Projects" description="Thunder Brains stands at the forefront of IT consultancy, merging innovative approaches with hands-on expertise. Our project portfolio speaks volumes, reflecting our commitment to turning tech visions into actionable realities" keywords="Innovative,Hands-on tech expertise,Tech vision transformation,Actionable IT realities">
     <Header></Header>
     <section class="page-header ">
         <div class="page-header__bg"></div>
@@ -16,13 +21,13 @@ const {} = Astro.props;
         <div class="container">
             <div class="page-header__inner text-center">
                 <h2>
-                    Digital Marketing
+                    Projects
                 </h2>
 
                 <ul class="thm-breadcrumb list-unstyled ml-0">
                     <!-- Breadcrumb NavXT 7.2.0 -->
                     <li class="home"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Ontech." href="https://bracketweb.com/ontechwp" class="home"><span property="name">ThunderBrains</span></a><meta property="position" content="1"></span></li>
-                    <li class="post post-page current-item"><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-page current-item">Digital Marketing</span><meta property="url" content="https://bracketweb.com/ontechwp/it-consultancy/"><meta property="position" content="2"></span></li>
+                    <li class="post post-page current-item"><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-page current-item">Projects</span><meta property="url" content="https://bracketweb.com/ontechwp/it-consultancy/"><meta property="position" content="2"></span></li>
                 </ul>
             </div>
         </div>
@@ -81,7 +86,7 @@ const {} = Astro.props;
                                                                     <p class="text1">Tech</p>
                                                                     <h3>
                                                                         <a class=""
-                                                                            href="project-details/index.html">Tech
+                                                                            href="/project-details">Tech
                                                                             cover industry</a>
                                                                     </h3>
                                                                     <p class="text2">The tech insurance industry
@@ -92,7 +97,7 @@ const {} = Astro.props;
                                                                 </div>
 
                                                                 <div class="icon-box">
-                                                                    <a href="project-details/index.html">
+                                                                    <a href="/project-details">
                                                                         <span aria-hidden="true"
                                                                             class="  icon-right-arrow3"></span>
                                                                     </a>
@@ -137,7 +142,7 @@ const {} = Astro.props;
                                                                     <p class="text1 text1">Tech</p>
                                                                     <h3>
                                                                         <a class=" "
-                                                                            href="project-details/index.html">Application
+                                                                            href="project-details">Application
                                                                             Integration</a>
                                                                     </h3>
                                                                     <p class="text2 text2">Application integration
@@ -148,7 +153,7 @@ const {} = Astro.props;
                                                                 </div>
 
                                                                 <div class="icon-box">
-                                                                    <a href="project-details/index.html">
+                                                                    <a href="project-details">
                                                                         <span aria-hidden="true"
                                                                             class="  icon-right-arrow3"></span>
                                                                     </a>
@@ -193,7 +198,7 @@ const {} = Astro.props;
                                                                     <p class="text1 text1 text1">Tech</p>
                                                                     <h3>
                                                                         <a class="  "
-                                                                            href="project-details/index.html">Database
+                                                                            href="/project-details">Database
                                                                             Design</a>
                                                                     </h3>
                                                                     <p class="text2 text2 text2">Database design is
@@ -204,7 +209,7 @@ const {} = Astro.props;
                                                                 </div>
 
                                                                 <div class="icon-box">
-                                                                    <a href="project-details/index.html">
+                                                                    <a href="/project-details">
                                                                         <span aria-hidden="true"
                                                                             class="  icon-right-arrow3"></span>
                                                                     </a>
@@ -249,7 +254,7 @@ const {} = Astro.props;
                                                                     <p class="text1 text1 text1 text1">Cyber</p>
                                                                     <h3>
                                                                         <a class="   "
-                                                                            href="project-details/index.html">Cyber
+                                                                            href="/project-details">Cyber
                                                                             Program Management</a>
                                                                     </h3>
                                                                     <p class="text2 text2 text2 text2">Cyber program
@@ -259,7 +264,7 @@ const {} = Astro.props;
                                                                 </div>
 
                                                                 <div class="icon-box">
-                                                                    <a href="project-details/index.html">
+                                                                    <a href="/project-details">
                                                                         <span aria-hidden="true"
                                                                             class="  icon-right-arrow3"></span>
                                                                     </a>
@@ -305,7 +310,7 @@ const {} = Astro.props;
                                                                         Marketing</p>
                                                                     <h3>
                                                                         <a class="    "
-                                                                            href="project-details/index.html">Digital
+                                                                            href="/project-details">Digital
                                                                             Marketing</a>
                                                                     </h3>
                                                                     <p class="text2 text2 text2 text2 text2">
@@ -317,7 +322,7 @@ const {} = Astro.props;
                                                                 </div>
 
                                                                 <div class="icon-box">
-                                                                    <a href="project-details/index.html">
+                                                                    <a href="/project-details">
                                                                         <span aria-hidden="true"
                                                                             class="  icon-right-arrow3"></span>
                                                                     </a>
@@ -363,7 +368,7 @@ const {} = Astro.props;
                                                                         Tech</p>
                                                                     <h3>
                                                                         <a class="     "
-                                                                            href="project-details/index.html">Business
+                                                                            href="/project-details">Business
                                                                             Consulting Tech</a>
                                                                     </h3>
                                                                     <p class="text2 text2 text2 text2 text2 text2">
@@ -375,7 +380,7 @@ const {} = Astro.props;
                                                                 </div>
 
                                                                 <div class="icon-box">
-                                                                    <a href="project-details/index.html">
+                                                                    <a href="/project-details">
                                                                         <span aria-hidden="true"
                                                                             class="  icon-right-arrow3"></span>
                                                                     </a>
@@ -397,6 +402,31 @@ const {} = Astro.props;
                 </div>
             </div>
         </section>
+        <section
+        class="elementor-section elementor-top-section elementor-element elementor-element-660093b elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+        data-id="660093b" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-no">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3ca09711"
+                data-id="3ca09711" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-61cb8460 elementor-widget elementor-widget-ontech-google-maps"
+                        data-id="61cb8460" data-element_type="widget"
+                        data-widget_type="ontech-google-maps.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-custom-embed">
+                                <iframe src="https://maps.google.com/maps?q=ThunderBrains&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
+                                        title="Thunder Brains Pvt. Ltd."
+                                        aria-label="Thunder Brains Pvt. Ltd."
+                                        width="100%"
+                                        height="500px">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </div>
 
     <Footer></Footer>
