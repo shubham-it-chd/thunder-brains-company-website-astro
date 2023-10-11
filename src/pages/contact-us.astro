@@ -1,9 +1,12 @@
 ---
+import { sendEmail } from "../Services/EmailService";
 import Layout from "../layouts/Layout.astro";
 
 interface Props {}
 
 const {} = Astro.props;
+
+sendEmail().catch(console.error)
 ---
 <style>
     .page-header__bg {
