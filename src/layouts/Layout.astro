@@ -75,6 +75,9 @@ const { title, description,keywords  } = Astro.props;
             color: #fff;
             text-decoration: none
         }
+        @media only screen and (max-width: 600px) {
+            .myk-panelbody{position:absolute!important}
+       }
     </style>
     <style id='global-styles-inline-css' is:global>
         body {
