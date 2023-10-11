@@ -726,7 +726,17 @@ const { title, description,keywords  } = Astro.props;
 				id='elementor-frontend-js'></script>
         <script src='wp-includes/js/wafloatbox-0.2.js' id='imagesloaded-js'></script>
         <script src="wp-includes/js/whats-app-script.js" id="whatsappscript"></script>
-                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <script src='https://widgets.sociablekit.com/google-reviews/widget.js'></script>
+        <script>
+            jQuery(document).ready(function() {
+                setTimeout(function() {
+                    jQuery("#sectionGoogleReviewRenderer .es-main-container > a").remove();
+                }, 1000); 
+            });
+            </script>
+            
 	</body>
 </html>
 <style is:global>
