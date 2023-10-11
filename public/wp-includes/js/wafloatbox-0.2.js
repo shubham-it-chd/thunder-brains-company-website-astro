@@ -6,7 +6,7 @@
         var a = $(this)
         a.prepend(`
         <div class="myk-btn">
-            <img src="../wp-content/images/wa-icon.png" class="myk-wa-icon">
+            <img src="/wp-content/images/wa-icon.png" class="myk-wa-icon">
         </div>
         <div class="myk-panel" style="z-index: 9999;position:fixed"></div>
         `)
@@ -16,7 +16,7 @@
         b.append(`
         <div class="myk-panelhead">
             <span class="myk-close">x</span>
-                <img src="../wp-content/images/wa-icon.png" class="myk-wa-icon" width="30px">
+                <img src="/wp-content/images/wa-icon.png" class="myk-wa-icon" width="30px">
             <h5 class="myk-paneltitle">Questions? </h5>
         </div>
         <div class="myk-panelbody"></div>
