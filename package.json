@@ -13,12 +13,18 @@
     "@astrojs/mdx": "^1.1.1",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.1",
+    "@vanilla-extract/css": "^1.13.0",
+    "@vanilla-extract/vite-plugin": "^3.9.0",
     "astro": "^3.2.3",
+    "dotenv": "^16.3.1",
     "nodemailer": "^6.9.6"
   },
   "description": "```sh\r npm create astro@latest -- --template basics\r ```",
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^4.4.11"
+  }
 }

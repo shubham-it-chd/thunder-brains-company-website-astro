@@ -1,8 +1,12 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
-import sitemap from '@astrojs/sitemap';
-
-// https://astro.build/config
 export default defineConfig({
-	integrations: [sitemap()],
+  integrations: [sitemap()],
+  vite: {
+    define: {
+      "import.meta.env.SECRET_EMAIL_USERNAME": JSON.stringify(process.env.SECRET_EMAIL_USERNAME),
+      "import.meta.env.SECRET_EMAIL_PASS": JSON.stringify(process.env.SECRET_EMAIL_PASS),
+    },
+  },
 });
