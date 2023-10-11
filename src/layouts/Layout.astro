@@ -58,7 +58,7 @@ const { title, description,keywords  } = Astro.props;
     <link rel='stylesheet' id='wc-all-blocks-style-css'
           href='wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-all-blocks-style71f0.css?ver=10.9.3'
           media='all' /> -->
-    <style id='classic-theme-styles-inline-css'>
+    <style id='classic-theme-styles-inline-css' is:global>
         /*! This file is auto-generated */
         .wp-block-button__link {
             color: #fff;
@@ -76,7 +76,7 @@ const { title, description,keywords  } = Astro.props;
             text-decoration: none
         }
     </style>
-    <style id='global-styles-inline-css'>
+    <style id='global-styles-inline-css' is:global>
         body {
             --wp--preset--color--black: #000000;
             --wp--preset--color--cyan-bluish-gray: #abb8c3;
@@ -446,7 +446,7 @@ const { title, description,keywords  } = Astro.props;
           href='wp-content/plugins/contact-form-7/includes/css/styles41a3.css?ver=5.8' media='all' />
     <link rel='stylesheet' id='layerdrops-toolbar-css-css'
           href='wp-content/plugins/layerdrops-toolbar/assets/css/layerdrops-toolbare637.css?ver=1696262227' media='all' />
-    <style id='woocommerce-inline-inline-css'>
+    <style id='woocommerce-inline-inline-css' is:global>
         .woocommerce form .form-row .required {
             visibility: visible;
         }
@@ -495,7 +495,7 @@ const { title, description,keywords  } = Astro.props;
           href='wp-content/plugins/woo-smart-wishlist/assets/css/icons125b.css?ver=4.7.4' media='all' />
     <link rel='stylesheet' id='woosw-frontend-css'
           href='wp-content/plugins/woo-smart-wishlist/assets/css/frontend125b.css?ver=4.7.4' media='all' />
-    <style id='woosw-frontend-inline-css'>
+    <style id='woosw-frontend-inline-css' is:global>
         .woosw-popup .woosw-popup-inner .woosw-popup-content .woosw-popup-content-bot .woosw-notice {
             background-color: #5fbd74;
         }
@@ -520,7 +520,7 @@ const { title, description,keywords  } = Astro.props;
           href='wp-content/themes/ontech/assets/vendors/fontawesome/css/all.min9e0b.css?ver=5.15.1' media='all' />
     <link rel='stylesheet' id='ontech-style-css' href='wp-content/themes/ontech/stylee637.css?ver=1696262227'
           media='all' />
-    <style id='ontech-style-inline-css'>
+    <style id='ontech-style-inline-css' is:global>
         :root {
             --ontech-primary: #30a5a2;
             --ontech-primary-rgb: 48, 165, 162;
@@ -535,7 +535,7 @@ const { title, description,keywords  } = Astro.props;
         }
 
         .preloader .preloader__image {
-            background-image: url(/wp-content/uploads/2023/07/loader-1.png);
+            background-image: url(/wp-content/uploads/2023/07/removebg-cropped-Thunder-Brain-Logo.png);
         }
 
         :root {
@@ -731,7 +731,7 @@ const { title, description,keywords  } = Astro.props;
         <script src='https://widgets.sociablekit.com/google-reviews/widget.js'></script>
         <script>
             jQuery(document).ready(function() {
-                setTimeout(function() {
+                setTimeout(function() {s
                     jQuery("#sectionGoogleReviewRenderer .es-main-container > a").remove();
                 }, 1000); 
             });
