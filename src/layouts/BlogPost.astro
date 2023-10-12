@@ -588,10 +588,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</head>
 	<body  class="home page-template page-template-elementor_header_footer page page-id-14 theme-ontech woocommerce-no-js custom-cursor woocommerce-active elementor-default elementor-template-full-width elementor-kit-5 elementor-page elementor-page-14">
 		<style>
-            	.main {
+            .main {
 				width: calc(100% - 2em);
 				max-width: 100%;
 				margin-top: 0;
+                background-color: #F7F3F5!important;
 			}
             .hero-image {
 				width: 100%;
@@ -604,11 +605,14 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 margin-top:20px
 			}
 			.prose {
-				width: 720px;
+				width: 1000px;
 				max-width: calc(100% - 2em);
 				margin: auto;
                 padding: 0.5em;
 				color: rgb(var(--gray-dark));
+                background-color: #fff!important;
+                border-radius:18px;
+                margin-top:20px
 			}
             .title {
 				margin-bottom: 1em;
@@ -629,7 +633,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             .img-height{height:500px}
             .top-margin{margin-top:10px;margin-bottom:10px!important}
         </style>
-        <main>
+        <main class="main">
 			<article>
 				<div class="hero-image">
 					{heroImage && <img width={1020} class="img-height"  src={heroImage} alt="" />}
