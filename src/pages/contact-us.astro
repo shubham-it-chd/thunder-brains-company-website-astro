@@ -1,12 +1,11 @@
 ---
-import { sendEmail } from "../Services/EmailService";
-import Layout from "../layouts/Layout.astro";
+export const prerender = false;
 
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../Forms/ContactForm.jsx";
 interface Props {}
 
 const {} = Astro.props;
-
-sendEmail().catch(console.error)
 ---
 <style>
     .page-header__bg {
@@ -122,54 +121,8 @@ sendEmail().catch(console.error)
                                                     <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
                                                 </div>
                                                 <div class="contact-page__form contact-form-validated">
-                                                    <div class="row">
-                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                                            <div class="contact-page__input-box">
-                                                                <p>
-                                                                    <span class="wpcf7-form-control-wrap" data-name="name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="User Name" value="" type="text" name="name" /></span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                                            <div class="contact-page__input-box">
-                                                                <p>
-                                                                    <span class="wpcf7-form-control-wrap" data-name="email"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Email Address" value="" type="text" name="email" /></span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                                            <div class="contact-page__input-box">
-                                                                <p>
-                                                                    <span class="wpcf7-form-control-wrap" data-name="phone"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Phone" value="" type="text" name="phone" /></span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                                            <div class="contact-page__input-box">
-                                                                <p>
-                                                                    <span class="wpcf7-form-control-wrap" data-name="Subject"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Subject" value="" type="text" name="Subject" /></span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                                            <div class="contact-page__input-box">
-                                                                <p>
-                                                                    <span class="wpcf7-form-control-wrap" data-name="textarea-40"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Message here" name="textarea-40"></textarea></span>
-                                                                </p>
-                                                            </div>
-                                                            <div class="contact-page__btn">
-                                                                <p>
-                                                                    <button type="submit" class="thm-btn">
-                                                                        Send A Message
-                                                                    </button>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    <ContactForm client:only/>
+                                                   
                                                 </div><div class="wpcf7-response-output" aria-hidden="true"></div>
                                             </form>
                                         </div>
